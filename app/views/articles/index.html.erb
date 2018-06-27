@@ -1,11 +1,13 @@
 <h1>listing all articles </h1>
+<body style= "background-color:lightblue;">
 <p>
    <%= link_to "create a new article", new_article_path %>
 </p>
 
-<table>
+<table <table style="width:50%">
+
 <tr>
-   	<th>title</th>
+   <th>title</th>
    <th>description</th>
 </tr>
 
@@ -13,10 +15,12 @@
 <tr>
 	<td><%= article.title %></td>
     <td><%= article.description %></td>
-    <td><%= link_to 'Edit', edit_article_path(article) %></td>
+    <td><%= link_to 'Edit',edit_article_path(article) %></td>
     <td><%= link_to 'Show', article_path(article) %></td>
+    <td><%= link_to 'Delete', article_path(article), method: :delete, data: {confirm: "are you sure"} %></td>
 
 
 </tr>
 <%end%>
 </table>
+</body>
