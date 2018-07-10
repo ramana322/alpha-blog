@@ -11,19 +11,20 @@ end
  end
 
  def create
-    debugger
     
     @article = Article.new(article_params)
 
     @article.user = User.first
     if @article.save
         flash[:success] = "Article was successfully created"
-    	redirect_to article_path(@article)
+        redirect_to article_path(@article)
     else
-    	render 'new'
+        render 'new'
     end
 end
     def update
+   
+         byebug
      
      if @article.update(article_params)
      	flash[:success] = "Article was successfully updated"
