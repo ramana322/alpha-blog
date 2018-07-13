@@ -24,7 +24,6 @@ end
 end
     def update
    
-         byebug
      
      if @article.update(article_params)
      	flash[:success] = "Article was successfully updated"
