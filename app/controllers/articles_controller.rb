@@ -17,7 +17,7 @@ end
     
     @article = Article.new(article_params)
 
-    @article.user = current_user
+    @article.user = current_user    
     if @article.save
         flash[:success] = "Article was successfully created"
         redirect_to article_path(@article)
@@ -54,8 +54,9 @@ end
  def article_params
  	params.require(:article).permit(:title, :description)
  end 
+ 
 def require_same_user
-    if current_user != @article.user
+    if current_user != @article.user and !current_user.admin?
 flash[:danger] = "you can only delete & delete ypur own article"
     end
 end
