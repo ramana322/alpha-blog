@@ -1,0 +1,6 @@
+
+<% @books.each do |book| %>
+	<div><%= book.name %><%= link_to 'Edit Book', edit_book_path(book) %></div>
+<% end %>
+
+<%= link_to 'New Book', new_book_path %>
