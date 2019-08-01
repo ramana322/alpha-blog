@@ -1,0 +1,15 @@
+current directory: /home/venkat/rails/alpha-blog/vendor/cache/ruby/2.3.0/gems/bindex-0.5.0/ext/bindex
+/home/venkat/.rbenv/versions/2.3.1/bin/ruby -r ./siteconf20190719-31663-16f38ln.rb extconf.rb
+creating Makefile
+
+current directory: /home/venkat/rails/alpha-blog/vendor/cache/ruby/2.3.0/gems/bindex-0.5.0/ext/bindex
+make "DESTDIR=" clean
+
+current directory: /home/venkat/rails/alpha-blog/vendor/cache/ruby/2.3.0/gems/bindex-0.5.0/ext/bindex
+make "DESTDIR="
+compiling cruby.c
+linking shared-object bindex/cruby.so
+
+current directory: /home/venkat/rails/alpha-blog/vendor/cache/ruby/2.3.0/gems/bindex-0.5.0/ext/bindex
+make "DESTDIR=" install
+/usr/bin/install -c -m 0755 cruby.so ./.gem.20190719-31663-1wvpg2p/bindex

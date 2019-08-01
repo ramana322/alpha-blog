@@ -1,0 +1,36 @@
+current directory: /home/venkat/rails/alpha-blog/vendor/cache/ruby/2.3.0/gems/bootsnap-1.3.0/ext/bootsnap
+/home/venkat/.rbenv/versions/2.3.1/bin/ruby -r ./siteconf20190719-31663-19h9nvx.rb extconf.rb
+creating Makefile
+
+current directory: /home/venkat/rails/alpha-blog/vendor/cache/ruby/2.3.0/gems/bootsnap-1.3.0/ext/bootsnap
+make "DESTDIR=" clean
+
+current directory: /home/venkat/rails/alpha-blog/vendor/cache/ruby/2.3.0/gems/bootsnap-1.3.0/ext/bootsnap
+make "DESTDIR="
+compiling bootsnap.c
+bootsnap.c: In function ‘get_ruby_platform’:
+bootsnap.c:214:3: warning: ISO C90 forbids mixed declarations and code [-Wdeclaration-after-statement]
+   struct utsname utsname;
+   ^~~~~~
+bootsnap.c: In function ‘bs_cache_path’:
+bootsnap.c:240:39: warning: format ‘%llx’ expects argument of type ‘long long unsigned int’, but argument 5 has type ‘uint64_t {aka long unsigned int}’ [-Wformat=]
+   sprintf(*cache_path, "%s/%02x/%014llx", cachedir, first_byte, remainder);
+                                 ~~~~~~^
+                                 %014lx
+bootsnap.c: In function ‘bs_rb_fetch’:
+bootsnap.c:279:3: warning: ISO C90 forbids mixed declarations and code [-Wdeclaration-after-statement]
+   char * cachedir = RSTRING_PTR(cachedir_v);
+   ^~~~
+bootsnap.c:621:13: warning: ‘output_data’ may be used uninitialized in this function [-Wmaybe-uninitialized]
+     else if (!NIL_P(output_data))             goto succeed; /* fast-path, goal */
+             ^
+bootsnap.c:592:9: note: ‘output_data’ was declared here
+   VALUE output_data;  /* return data, e.g. ruby hash or loaded iseq */
+         ^~~~~~~~~~~
+linking shared-object bootsnap/bootsnap.so
+bootsnap.o: In function `atomic_write_cache_file':
+/home/venkat/rails/alpha-blog/vendor/cache/ruby/2.3.0/gems/bootsnap-1.3.0/ext/bootsnap/bootsnap.c:477: warning: the use of `mktemp' is dangerous, better use `mkstemp' or `mkdtemp'
+
+current directory: /home/venkat/rails/alpha-blog/vendor/cache/ruby/2.3.0/gems/bootsnap-1.3.0/ext/bootsnap
+make "DESTDIR=" install
+/usr/bin/install -c -m 0755 bootsnap.so ./.gem.20190719-31663-159fcve/bootsnap

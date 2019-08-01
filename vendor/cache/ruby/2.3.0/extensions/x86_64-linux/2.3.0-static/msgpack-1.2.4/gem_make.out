@@ -1,0 +1,65 @@
+current directory: /home/venkat/rails/alpha-blog/vendor/cache/ruby/2.3.0/gems/msgpack-1.2.4/ext/msgpack
+/home/venkat/.rbenv/versions/2.3.1/bin/ruby -r ./siteconf20190719-31663-b2b91q.rb extconf.rb
+checking for ruby/st.h... yes
+checking for st.h... yes
+checking for rb_str_replace() in ruby.h... yes
+checking for rb_intern_str() in ruby.h... yes
+checking for rb_sym2str() in ruby.h... yes
+checking for rb_str_intern() in ruby.h... yes
+checking for rb_block_lambda() in ruby.h... yes
+checking for rb_hash_dup() in ruby.h... yes
+checking for rb_hash_clear() in ruby.h... yes
+creating Makefile
+
+To see why this extension failed to compile, please check the mkmf.log which can be found here:
+
+  /home/venkat/rails/alpha-blog/vendor/cache/ruby/2.3.0/extensions/x86_64-linux/2.3.0-static/msgpack-1.2.4/mkmf.log
+
+current directory: /home/venkat/rails/alpha-blog/vendor/cache/ruby/2.3.0/gems/msgpack-1.2.4/ext/msgpack
+make "DESTDIR=" clean
+
+current directory: /home/venkat/rails/alpha-blog/vendor/cache/ruby/2.3.0/gems/msgpack-1.2.4/ext/msgpack
+make "DESTDIR="
+compiling rmem.c
+compiling extension_value_class.c
+compiling unpacker_class.c
+unpacker_class.c:219:14: warning: ‘Unpacker_peek_next_type’ defined but not used [-Wunused-function]
+ static VALUE Unpacker_peek_next_type(VALUE self)
+              ^~~~~~~~~~~~~~~~~~~~~~~
+compiling unpacker_ext_registry.c
+compiling unpacker.c
+compiling buffer.c
+compiling factory_class.c
+compiling packer.c
+In file included from packer.h:22:0,
+                 from packer.c:19:
+packer.c: In function ‘msgpack_packer_write_other_value’:
+packer_ext_registry.h:129:9: warning: ‘lookup_class’ may be used uninitialized in this function [-Wmaybe-uninitialized]
+         rb_hash_aset(pkrg->cache, lookup_class, superclass_type);
+         ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+packer_ext_registry.h:85:11: note: ‘lookup_class’ was declared here
+     VALUE lookup_class;
+           ^~~~~~~~~~~~
+compiling packer_ext_registry.c
+compiling packer_class.c
+compiling buffer_class.c
+buffer_class.c: In function ‘Buffer_read_all’:
+buffer_class.c:335:13: warning: this statement may fall through [-Wimplicit-fallthrough=]
+         out = argv[1];
+         ~~~~^~~~~~~~~
+buffer_class.c:337:5: note: here
+     case 1:
+     ^~~~
+buffer_class.c: In function ‘Buffer_read’:
+buffer_class.c:381:13: warning: this statement may fall through [-Wimplicit-fallthrough=]
+         out = argv[1];
+         ~~~~^~~~~~~~~
+buffer_class.c:383:5: note: here
+     case 1:
+     ^~~~
+compiling rbinit.c
+linking shared-object msgpack/msgpack.so
+
+current directory: /home/venkat/rails/alpha-blog/vendor/cache/ruby/2.3.0/gems/msgpack-1.2.4/ext/msgpack
+make "DESTDIR=" install
+/usr/bin/install -c -m 0755 msgpack.so ./.gem.20190719-31663-3k9b7/msgpack

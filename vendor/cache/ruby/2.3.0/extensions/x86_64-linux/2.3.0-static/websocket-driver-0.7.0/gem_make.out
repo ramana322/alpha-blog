@@ -1,0 +1,15 @@
+current directory: /home/venkat/rails/alpha-blog/vendor/cache/ruby/2.3.0/gems/websocket-driver-0.7.0/ext/websocket-driver
+/home/venkat/.rbenv/versions/2.3.1/bin/ruby -r ./siteconf20190719-31663-89tlg.rb extconf.rb
+creating Makefile
+
+current directory: /home/venkat/rails/alpha-blog/vendor/cache/ruby/2.3.0/gems/websocket-driver-0.7.0/ext/websocket-driver
+make "DESTDIR=" clean
+
+current directory: /home/venkat/rails/alpha-blog/vendor/cache/ruby/2.3.0/gems/websocket-driver-0.7.0/ext/websocket-driver
+make "DESTDIR="
+compiling websocket_mask.c
+linking shared-object websocket_mask.so
+
+current directory: /home/venkat/rails/alpha-blog/vendor/cache/ruby/2.3.0/gems/websocket-driver-0.7.0/ext/websocket-driver
+make "DESTDIR=" install
+/usr/bin/install -c -m 0755 websocket_mask.so ./.gem.20190719-31663-1cnm8e9

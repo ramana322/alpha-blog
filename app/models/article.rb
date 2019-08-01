@@ -1,7 +1,10 @@
 class Article < ApplicationRecord
+	include ImageAssociations
+	
 	belongs_to :user
 	has_many :article_categories
 	has_many :categories, through: :article_categories
+
 
 	has_many :images, as: :imageable, dependent: :destroy
 

@@ -13,8 +13,8 @@ class UsersController < ApplicationController
 
   def create
     @user = User.new(user_params)
-
     if @user.save
+      UserMailer.delay.(run_at: 5.minutes.from_now).welcome_email(user_params)
       session[:user_id] = @user.id
     	flash[:success] = "welcome to the alpha-blog #{@user.username}"
       redirect_to user_path(@user)
@@ -37,37 +37,41 @@ class UsersController < ApplicationController
   	end
   end
     
-    def show
+  def show
       
-      @user_articles = @user.articles.paginate(page: params[:page], per_page: 5)
+    @user_articles = @user.articles.paginate(page: params[:page], per_page: 5)
 
-    end
+  end
 
-    def destroy
-      @user = User.find(params[:id]) 
-      @user.destroy
-      flash[:danger] = "User and all articles created by user have been deleted"
-      redirect_to users_path
-    end
+  def destroy
+    @user = User.find(params[:id]) 
+    @user.destroy
+    flash[:danger] = "User and all articles created by user have been deleted"
+    redirect_to users_path
+  end
 
-    private
-    def user_params
-    	params.require(:user).permit(:username, :email, :password)
-    end
-    def set_user
-      @user = User.find(params[:id])
-    end
-    def require_same_user
-      if current_user != @user
-        flash[:danger] = "you can only Edit your own user"
-        redirect_to root_path
-      end
-    end
-   def require_admin
-    if logged_in? and !current_user.admin?
-      flash[:danger] = "only  admin users can perform that action"
+  private
+
+  def user_params
+  	params.require(:user).permit(:username, :email, :password, :dob)
+  end
+
+  def set_user
+    @user = User.find(params[:id])
+  end
+
+  def require_same_user
+    if current_user != @user
+      flash[:danger] = "you can only Edit your own user"
       redirect_to root_path
-    end 
+    end
+  end
 
-end
+  def require_admin
+    if logged_in? and !current_user.admin?
+    flash[:danger] = "only  admin users can perform that action"
+    redirect_to root_path
+    end
+  end
+
 end

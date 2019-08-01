@@ -1,0 +1,5 @@
+current directory: /home/venkat/rails/alpha-blog/vendor/cache/ruby/2.3.0/gems/childprocess-1.0.1/ext
+/home/venkat/.rbenv/versions/2.3.1/bin/ruby mkrf_conf.rb
+
+current directory: /home/venkat/rails/alpha-blog/vendor/cache/ruby/2.3.0/gems/childprocess-1.0.1/ext
+/home/venkat/.rbenv/versions/2.3.1/bin/ruby -rubygems /home/venkat/rails/alpha-blog/vendor/cache/ruby/2.3.0/gems/rake-12.3.3/exe/rake RUBYARCHDIR=/home/venkat/rails/alpha-blog/vendor/cache/ruby/2.3.0/extensions/x86_64-linux/2.3.0-static/childprocess-1.0.1 RUBYLIBDIR=/home/venkat/rails/alpha-blog/vendor/cache/ruby/2.3.0/extensions/x86_64-linux/2.3.0-static/childprocess-1.0.1

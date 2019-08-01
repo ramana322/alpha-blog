@@ -1,0 +1,19 @@
+current directory: /home/venkat/rails/alpha-blog/vendor/cache/ruby/2.3.0/gems/byebug-10.0.2/ext/byebug
+/home/venkat/.rbenv/versions/2.3.1/bin/ruby -r ./siteconf20190719-31663-obfn6w.rb extconf.rb
+creating Makefile
+
+current directory: /home/venkat/rails/alpha-blog/vendor/cache/ruby/2.3.0/gems/byebug-10.0.2/ext/byebug
+make "DESTDIR=" clean
+
+current directory: /home/venkat/rails/alpha-blog/vendor/cache/ruby/2.3.0/gems/byebug-10.0.2/ext/byebug
+make "DESTDIR="
+compiling threads.c
+compiling breakpoint.c
+compiling byebug.c
+compiling context.c
+compiling locker.c
+linking shared-object byebug/byebug.so
+
+current directory: /home/venkat/rails/alpha-blog/vendor/cache/ruby/2.3.0/gems/byebug-10.0.2/ext/byebug
+make "DESTDIR=" install
+/usr/bin/install -c -m 0755 byebug.so ./.gem.20190719-31663-uzvg0d/byebug
